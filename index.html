@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This is a personal portfolio website designed and developed by Abasiama John Akpan (Abas Obot)">
+        <meta name="author" content="Abasiama Akpan (Abas Obot)">
+        <!--favicon-->
+        <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+        <title>Abasiama Akpan Portfolio</title>
+        <link rel="canonical" href="/index.html">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384- GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+        <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="./style.css" rel="stylesheet"/>
+    
+    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+        .abutton {
+            background-color: #ec5b53;
+            border-color: #ec5b53;
+        }
+        .abutton:hover {
+            background-color: #cf332b;
+            border-color: #cf332b;
+        }
+        .h11 {
+          color:#002d5b;
+        }
+        
+        .container1 {
+          background-color: #faeaea;
+          border-radius: 0px 150px 0px 0px;
+        }
+        .container2{
+          background-color: aliceblue;
+        }
+        .section4{
+          padding-top: 20px;
+        }
+        .card-design{
+          border: 0px;
+        }
+
+        /** curved divs**/
+
+      .round-corner1 {
+        height: 100px;
+        background-color:#a9e8ff96;
+        border-radius: 200px 10px 250px 3px;
+      }
+
+/* -------carousel slides----*/
+ .carousel-control.right, .carousel-control.left {
+      background-image: none;  
+  }        
+.carousel-indicators {
+  bottom:0px;
+}
+.carousel-indicators li {
+   border-color: #a60c0c;
+}
+.carousel-indicators .active {
+  background-color: #19079e;
+}
+.carousel-inner {
+   margin-bottom:20px;
+}
+.carousel .carousel-item{
+    height: 400px;
+}
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+.carousel .images {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+  /**Footer **/
+  .footlink {
+    color: #d6d6df !important;
+    font-style:normal;
+    font-size: medium;
+  }
+
+  /** My Dark mode**/
+  [data-bs-theme=dark] .dark {
+    color: #ffffff;
+        background-color: #11101000 !important;
+      }
+    /**  [data-bs-theme=light] .dark {
+        background-color: #faeaea !important; 
+      }**/
+      [data-bs-theme=dark] .footer1 {
+        background-color: #11101000 !important; 
+      }
+      [data-bs-theme=dark] .dark-heading {
+        color: #ffffff;
+      }
+      [data-bs-theme=dark] .skillbox {
+        background-color: #2b3035 !important;
+        border: 1px #495057 solid !important;
+      }
+        /** Pcs and pads**/
+        @media screen and (min-width: 768px) {
+          .mobile-display {
+            display: none;
+          }
+          .mobile-hidden{
+            display: show;
+          }
+        }
+        
+        /** Mobile settings**/
+        @media screen and (max-width: 768px) {
+          .mobile-display {
+            display: show;
+          }
+          .mobile-hidden{
+            display: none;
+          }
+          .img1 {
+            margin-left: 2rem;
+          }
+          .h11 {
+            color:#002d5b;
+          }
+          .h12{
+            font-size: 1.2rem;
+          }
+          .p1 {
+            font-size: 16px;
+          }
+          .nav-link{
+            background-color: white;
+            padding-left: 5px;
+            border:#eaedfa 0.5px solid;
+            color: #cf332b;
+          }
+          .abutton:hover{
+            color: aqua;
+          }
+          .navbar-nav .nav-link.active{
+            color:#000e6b;
+          }
+        }
+        /** Slide settings for mobile**
+        .images{
+          width: 95%;
+          height: auto !important;
+        }
+        .carouseldiv{
+          padding: 1px !important;
+          margin: 3px !important;
+        }**/
+    </style>
+    </head>
+    
+    <script>
+      /*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2024 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
+
+(() => {
+  'use strict'
+
+  const getStoredTheme = () => localStorage.getItem('theme')
+  const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+  const getPreferredTheme = () => {
+    const storedTheme = getStoredTheme()
+    if (storedTheme) {
+      return storedTheme
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const setTheme = theme => {
+    if (theme === 'auto') {
+      document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+  }
+
+  setTheme(getPreferredTheme())
+
+  const showActiveTheme = (theme, focus = false) => {
+    const themeSwitcher = document.querySelector('#bd-theme')
+
+    if (!themeSwitcher) {
+      return
+    }
+
+    const themeSwitcherText = document.querySelector('#bd-theme-text')
+    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+      element.classList.remove('active')
+      element.setAttribute('aria-pressed', 'false')
+    })
+
+    btnToActive.classList.add('active')
+    btnToActive.setAttribute('aria-pressed', 'true')
+    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+
+    if (focus) {
+      themeSwitcher.focus()
+    }
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const storedTheme = getStoredTheme()
+    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+      setTheme(getPreferredTheme())
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showActiveTheme(getPreferredTheme())
+
+    document.querySelectorAll('[data-bs-theme-value]')
+      .forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          setStoredTheme(theme)
+          setTheme(theme)
+          showActiveTheme(theme, true)
+        })
+      })
+  })
+})()
+  </script> 
+
+<!--Body Begins-->
+
+  <body style="padding: 0px;" class="mb-0">
+    <!--Dark mode-->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em" fill="red"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!--Dark mode end-->
+
+    <section>
+      <div class="mobile-display container1 footer1" style="padding-top: 5rem;">
+      <!--phone nav-->
+       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="">
+            <img src="./abas-obot-logo-11.png" width="40px" height="40px" alt="mobile logo">
+          </a>
+
+          <h1 class="h12" style="color: #ec5b53;">Abas Obot</h1>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#Services">Services</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#Portfolio" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./portfolio/publications.html">Publications</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./projects.html">Projects</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">GitHub</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+
+            <!----
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>-->
+            <!----
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>-->
+          </div>
+        </div>
+      </nav>
+    </div>
+        <!--phone nav ends-->
+
+        <div style="background-color: #faeaea; " class="dark">
+        <section class="mobile-hidden">
+                <nav class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                      <div class="col-md-3 mb-2 mb-md-0">
+                        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                          <img src="./abas-obot-logo-11.png" width="40" height="40" alt="logo" />
+                          <!--<svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>-->
+                        </a>
+                      </div>
+                
+                      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 link-secondary ">Home</a></li>
+                        <li><a href="#About" class="nav-link px-2" >About</a></li>
+                        <li><a href="#services" class="nav-link px-2" >Services</a></li>
+                        <li><a href="#Portfolio" class="nav-link px-2" >Portfolio</a></li>
+                        <!--<li><a href="#" class="nav-link px-2">Contact</a></li>-->
+                      </ul>
+                
+                      <div class="col-md-3 text-end">
+                        <!--<button type="button" class="btn btn-outline-primary me-2">Chat me</button>-->
+                        <a href="#Contact"><button type="button" class="btn btn-primary abutton">Hire me</button></a>
+                      </div>
+                    </div>
+                  </nav>
+        </section>
+
+        <section>
+            <div class="container col-xxl-8 px-4 py-1 dark">
+                <div class="row  align-items-center g-5 py-0">
+                  
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold  h11 lh-1 mb-3 dark-heading">Hi! I'm Abasiama Akpan, you can call me Abas Obot</h1>
+                    <p class="lead">I am a full-stack developer, SEO specialist and a passionate writer. Welcome to my personal portfolio website.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <a href="#Contact"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 abutton ">Contact me</button></a>
+                      <!--<button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>-->
+                    </div>
+                  </div>
+
+                  <!--featured image-->
+                  <div class="col-10 col-sm-8 col-lg-6 align-self-center img1" >
+                    <div class="flex text-center">
+                    <img src="./images/enhanced-insuit.png" class=" d-block mx-lg-auto img-fluid rounded-circle "
+                     alt="Abasiama Akpan (Abas Obot) photo"  max-width="100%" height="462.5px" loading="lazy" 
+                    style="background-color: #ffffff">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+      </div>
+
+        <!--Section 3A About me intro-->
+
+      <section class="dark">
+        <div class="px-4 py-0 my-3 text-center">
+          <h2 class="display-5 fw-bold" id="About">About Me</h2>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 "><b>Full-stack developer | SEO Specialist | Content writer</b></p>
+            <hr style="border: rgb(228, 8, 8) solid 1px;"/>
+          </div>
+
+          <div class="col-12 col-md">
+            <!--<img class="mb-2" src="" alt="" width="24" height="19">-->
+            <small class="d-block mb-3 text-body-secondary">
+              <a href="https://wa.me/2348138663371?text=Thank%20you%20for%20your%20interest%20in%20my%20services.%20How%20can%20I%20help?" target="_blank"><i class="fa fa-whatsapp" style="font-size:24px; color: #ec5b53;"></i></a>
+              <a href="https://www.facebook.com/abasdgreat" target="_blank"><i class="fa fa-facebook-square" style="font-size:24px; color: #ec5b53; "></i></a>
+              <a href="https://www.linkedin.com/in/abasiama-akpan-65172195/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px; color: #ec5b53;"></i></a>
+              <a href="https://www.github.com/abasobot1" target="_blank"><i class="fa fa-github" style="font-size:24px; color: #ec5b53;"></i></a>
+              <a href="https://www.instagram.com/Abasdgreat" target="_blank"><i class="fa fa-instagram" style="font-size:24px; color: #ec5b53; "></i></a>
+              <a href="https://www.twitter.com/ObotAbasiama" target="_blank"><i class="fa fa-twitter-square" style="font-size:24px; color: #ec5b53;"></i></a>
+              <a href="mailto:abasjohn45@gmail.com" target="_blank"><i class="fa fa-envelope-o" style="font-size:24px ; color: #ec5b53;"></i></a>
+              
+            </small>
+          </div>
+
+        </div>
+        <!-- end about me intro-->
+        <!--about me details-->
+        <div class="container col-xxl-8 px-4 py-0">
+          <div class="row align-items-center g-5 py-5">
+            
+            <div class="col-lg-6">
+              <!--<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><a href="" style="color: #002d5b; text-decoration: none;">Who am I?</a></h1>-->
+              <p class="lead p1">A highly motivated individual with deep passion for innovative ideas. 
+                An experienced full-stack web developer, creative writer and a SEO specialist who 
+                have initiated several projects both for clients and personal objectives. 
+                Committed to crafting realistic solutions with my experience and expertise to lay foundation for 
+                my full-stack web development aspirations. As a graduate with scientific background, 
+                I've developed a keen eye for precision and problem-solving; 
+                skills that have seamlessly translated into the intricate world of coding.
+                I see every project as a unique opportunity 
+                to showcase my immense potentials. Meanwhile, I am ready to work with anyone from anywhere, 
+                and I strongly believe that I am good in what I do.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 abutton">Learn more</button>
+                <!--<button type="button" class="btn btn-outline-secondary btn-lg px-4" style="border-color: #cf332b;">Default</button>-->
+              </div>
+            </div>
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="./images/web-services.png" class="d-block mx-lg-auto img-fluid" alt="About Abasiama Akpan (Abas Obot)" width="400px" height="auto" loading="lazy">
+            </div>
+          </div>
+
+          <!--Jumbotron for Skills-->
+         <div class="row align-items-center g-5 py-5">
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6 mt-2">
+              <div class="h-100 p-5 rounded-3 skillbox" style="background-color: #ffffff; box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;"><!--text-bg-dark-->
+                <h2>Tech/Digital skills</h2>
+                <p>
+                  <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Frontend and backend wen development (full-stack)</li>
+                    <li>Git, GitHub and Version control</li>
+                    <li>Bootstrap, Node.js, React.js and other frameworks</li>
+                    <li>Data base (SQL and PostgreSQL) and API</li>
+                    <li>Web3 Decentralize App (DApp) and blockchain</li>
+                    <li>Digital marketing/ SEO</li>
+                    <li>CMS (WordPress, Blogger, Wix, etc.)</li>
+                    <li>SEO content writing, Copywriting and blogging</li>
+                    <li>Computer operations (Ms word, Corel Draw, Excel, Power Point, Internet Operations and Installations)</li>
+                  </ul>
+                </p>
+                <!--<button class="btn btn-outline-light" type="button">Example button</button>-->
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-2"><!--bg-body-tertiary border-->
+              <div class="h-100 p-5 rounded-3 skillbox" style="box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;">
+                <h2>Others</h2>
+                <p>
+                  <ul>
+                    <li>Additional skills</li>
+                    <ul>
+                      <li>Customer service</li>
+                      <li>Operations management</li>
+                      <li>Business management</li>
+                      <li>Proficient in scientific techniques, quality control/analysis, and research methodology</li>
+                    </ul>
+                  </ul>
+                  <ul>
+                    <li>Personal Attributes/Softskills</li>
+                    <ul>
+                      <li>Keen eye for precision and problem-solving skills</li>
+                      <li>Good interpersonal and effective team spirit</li>
+                      <li>Ability to work independently or with team with little no supervision</li>
+                      <li>Excellent communication, writing and teaching skills</li>
+                    </ul>
+                  </ul>
+                </p>
+                <!--<button class="btn btn-outline-secondary" type="button">Example button</button>-->
+              </div>
+            </div>
+          </div>
+       </div>
+       </div>
+      </section>
+
+      <!----
+      <section class="px-4 py-0 my-3" id="mySkills">
+        <h2>My Skills</h2>
+        <ul>
+          <li>Tech/Digital Skills</li>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Frontend and backend wen development (full-stack)</li>
+            <li>Git, GitHub and Version control</li>
+            <li>Bootstrap, Node.js, React.js and other frameworks</li>
+            <li>Data base (SQL and PostgreSQL) and API</li>
+            <li>Web3 Decentralize App (DApp) and blockchain</li>
+            <li>Digital marketing/ SEO</li>
+            <li>CMS (WordPress, Blogger, Wix, etc.)</li>
+            <li>SEO content writing, Copywriting and blogging</li>
+            <li>Computer operations (Ms word, Corel Draw, Excel, Power Point, Internet Operations and Installations)</li>
+          </ul>
+        </ul>
+        <ul>
+          <li>Others</li>
+          <ul>
+            <li>Customer service</li>
+            <li>Operations management</li>
+            <li>Business management</li>
+            <li>Proficient in scientific techniques, quality control/analysis, and research methodology</li>
+          </ul>
+        </ul>
+        <ul>
+          <li>Personal Attributes/Softskills</li>
+          <ul>
+            <li>Keen eye for precision and problem-solving skills</li>
+            <li>Good interpersonal and effective team spirit</li>
+            <li>Ability to work independently or with team with little no supervision</li>
+            <li>Excellent communication, writing and teaching skills</li>
+          </ul>
+        </ul>
+      </section>-->
+
+      <section>
+        <!--Section3 My Services-->
+        <div style="background: #ec5b53; border-radius: 100px;">
+        <section class="section4 container1 px-5" id="services">
+          <div class="px-4 py-0 my-3 text-center">
+            <h2 class="display-5 fw-bold h11" id="Services">My Services</h2>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">These are some of the services I offer </p>
+              <hr style="border: red solid 1px;"/>
+            </div>
+          </div>
+
+          <!--Service containers-->
+          <div class="row row-cols-1 row-cols-md-3 mb-0 py-3 text-center">
+
+            <div class="col py-2">
+              <div class="card card-design mb-4 py-2 rounded-3 shadow-sm" style="height: 98%;" >
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Content writing</h4>
+                </div>
+                <div class="card-body">
+                  <img src="./images/content-writing.jpg" width="50%" height="" alt="Content writing service by Abasiama Akpan (Abas Obot)" loading="lazy">
+                  <p class=""><br/>I write quality content that does not only showcase creativity and excellence, 
+                    but also meet your business goals. As a certified writer and digital marketer with experienced in SEO, 
+                    blogging and web development, I understand exactly what your audience need. Contact me for website copy, 
+                    blog posts, social media content, and other forms of creative writings. 
+                    You will not regret having my service.</p>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="#Contact"><button class="button-30" role="button" type="submit" value="Contact Us" style="width: 60%; ">Contact</button></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col py-2">
+              <div class="card card-design mb-4 py-2 rounded-3 shadow-sm" style="height: 98%;" >
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">SEO</h4>
+                </div>
+                <div class="card-body">
+                  <img src="./images/seo-small.png" width="50%" height="" alt="">
+                  <p class="p1">I help businesses like yours to escape search engine updates, get more web traffic, beat competitors 
+                    and rank at the top of search engine results through advanced SEO strategies. 
+                    What I do is to analyze your website with modern SEO tools, identify the issues and resolve 
+                    them. I offer both on-page and off-page SEO service, including setting-up your websites, 
+                    crafting content that meets standard SEO requirements, backlink building, spam score 
+                    reduction and resolution of content indexing issues.</p>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="#Contact"><button class="button-30" role="button" type="submit" value="Contact Us" style="width: 60%;">Contact</button></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col py-2">
+              <div class="card card-design mb-4 py-2 rounded-3 shadow-sm" style="height: 98%;">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Web dev</h4>
+                </div>
+              
+                <div class="card-body">
+                  <img src="./images/web-dev1.jpg" width="50%" height="" alt="">
+                  <p class="p1">I create quality and responsive website that is user-friendly, and 
+                    brand-oriented. When it comes to design, I love websites with stunning user interface; 
+                    but when it comes to development, I make is fast, secure and SEO friendly. I can build your website 
+                    from scratch or with CMS like WordPress. I can as well improve and resolve technical issues 
+                    on your existing website(s) or blog.</p>
+                </div>
+                <div class="text-center mb-2">
+                  <a href="#Contact"><button class="button-30" role="button" type="submit" value="Contact Us" style="width: 60%;">Contact</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+
+        <!--section 4 Portfolio-->
+      <section>
+        <div class="">
+            <div class="px-4 py-0 my-2 pt-4 text-center">
+              <h2 class="display-5 fw-bold h11 dark-heading" id="Portfolio">My Portfolio</h2>
+              <div class="col-lg-6 mx-auto">
+                <p class="lead mb-1">Checkout my work portfilio, including a few articles I have published and some of my projects.</p>
+                <hr style="border: red solid 1px;"/>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="./portfolio/publications.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 abutton ">Publications</button></a>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Projects</button>
+              </div>
+            </div>
+        </div><br/>
+
+      <div class="carouseldiv mx-md-5 "  style=" margin-left: 0rem; margin-right: 0rem; padding-right: 0rem; padding-left: 0rem; padding-top: 2px; margin-top: 0px;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ul>
+        
+        <div class="carousel-inner" >
+          <div class="carousel-item ">
+            <img class="first-slide images img-fluid" src="./images/coding-screen.jpg" alt="first slide" >
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1 class="dark-heading">Checkout My Projects</h1>
+                <p class="dark-heading">This section showcases my projects. You can see my ongoing projects here and those I have completed.</p>
+                <p><a class="btn btn-lg btn-primary" href="https://www.github.com/AbasObot1" role="button">Learn more</a></p>
+              </div> 
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide images img-fluid" src="./images/laughing-on-system.jpg" alt="Second slide" >
+            <div class="container">
+              <div class="carousel-caption">
+                <h1 class="dark-heading">My Articles and Publications</h1>
+                <p class="dark-heading">A list of some top arttiles I have published. This is just a few publications out of many.</p>
+                <p><a class="btn btn-lg btn-primary" href="./portfolio/publications.html" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img class="third-slide images img-fluid" src="./images/happy-guy-istock.jpg" alt="Third slide" >
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1 class="dark-heading">My Photos</h1>
+                <p class="dark-heading">You want to know me better? This is my real face. See my favorites photos and image gallery.</p>
+                <p class="dark-heading"><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only" >Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        </div><br/>
+      </div>
+    </section>
+    
+    <section>
+    </section>
+
+    <section >
+      
+     <footer class="pt-4 pt-md-5 border-top footer1" style="background-color: #002d5b; margin-bottom: 0px; color: #ffffff; padding-bottom: 0px;">
+      <div class="row" style="margin-left: 3rem; margin-right: 3rem;">
+        <div class="col-12 col-md">
+          <!--<img class="mb-2" src="" alt="" width="24" height="19">-->
+          <h5>Socials</h5>
+          <small class="d-block mb-3 text-body-secondary">
+            <a href="https://www.whatsApp.com/08138663371"><i class="fa fa-whatsapp" style="font-size:24px; color: #ffffff;"></i></a>
+            <a href="https://www.facebook.com/abasdgreat"><i class="fa fa-facebook-square" style="font-size:24px; color: #ffffff; "></i></a>
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin-square" style="font-size:24px; color: #ffffff;"></i></a>
+            <a href="https://www.github.com/abasobot1"><i class="fa fa-github" style="font-size:24px; color: #ffffff;"></i></a>
+            <a href="https://www.instagram.com/Abasdgreat"><i class="fa fa-instagram" style="font-size:24px; color: #ffffff; "></i></a>
+            <a href="https://www.twitter.com/ObotAbasiama"><i class="fa fa-twitter-square" style="font-size:24px; color: #ffffff;"></i></a>
+            <a href="https://www.gmail.com"><i class="fa fa-envelope-o" style="font-size:24px ; color: #ffffff;"></i></a>
+            
+          </small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#">Home</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#About">About</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#Services">Services</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#Portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md">
+          <h5>Assets</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="https://www.inspiredscoop.com" target="_blank">Inspired Scoop</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="https://blog.knowledgetrend.com" target="_blank">Knowledge Trend</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="https://service.inspiredscoop.com" target="_blank">Service Website</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="https://www.github.com/abasobot1" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md">
+          <h5 id="Contact">Contact</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1">Email:<a class="link-secondary text-decoration-none footlink" href="mailto:abasjohn45@gmail.com" target="_blank"> abasjohn45@gmail.com</a></li>
+            <li class="mb-1">Phone:<a class="link-secondary text-decoration-none footlink" href="tel:+234-813-866-3371"> +2348138663371</a></li>
+            <!--<li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#">Privacy</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none footlink" href="#">Terms</a></li>-->
+          </ul>
+        </div>
+      </div><hr/>
+      <div class="dark col-10 col-md-10 text-center py-2 px-3 justify-content-center" style="background-color: #002d5b;">
+        <p class="align-items-center">Copyright &copy; 2024 | Abasiama Akpan (Abas Obot)</p>
+      </div>
+    </footer>
+    
+  </section>
+    
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script>window.jQuery || document.write('<script src="getbootstrap.com/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+     <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+     <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+</html>
