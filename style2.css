@@ -26,7 +26,7 @@
     }
     /* Wine color for projects #b5162a */
     .container1 {
-      background-color: #faeaea;
+      background-color: #ffd6da !important; /*#faeaea;*/
       border-radius: 0px 150px 0px 0px;
     }
 
@@ -103,7 +103,7 @@
     background-color: #11101000 !important;
   }
   [data-bs-theme=light] .bg-body-tertiary {
-    background-color: #faeaea !important; 
+    background-color: #ffd6da !important; /*#faeaea !important;*/ 
   }
   [data-bs-theme=dark] .footer1 {
     background-color: #11101000 !important; 
