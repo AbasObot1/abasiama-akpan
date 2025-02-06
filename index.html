@@ -25,6 +25,11 @@
     
     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
     <style>
+      body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
       * {
         box-sizing: border-box;
       }
@@ -547,44 +552,6 @@
        </div>
       </section>
 
-      <!----
-      <section class="px-4 py-0 my-3" id="mySkills">
-        <h2>My Skills</h2>
-        <ul>
-          <li>Tech/Digital Skills</li>
-          <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Frontend and backend wen development (full-stack)</li>
-            <li>Git, GitHub and Version control</li>
-            <li>Bootstrap, Node.js, React.js and other frameworks</li>
-            <li>Data base (SQL and PostgreSQL) and API</li>
-            <li>Web3 Decentralize App (DApp) and blockchain</li>
-            <li>Digital marketing/ SEO</li>
-            <li>CMS (WordPress, Blogger, Wix, etc.)</li>
-            <li>SEO content writing, Copywriting and blogging</li>
-            <li>Computer operations (Ms word, Corel Draw, Excel, Power Point, Internet Operations and Installations)</li>
-          </ul>
-        </ul>
-        <ul>
-          <li>Others</li>
-          <ul>
-            <li>Customer service</li>
-            <li>Operations management</li>
-            <li>Business management</li>
-            <li>Proficient in scientific techniques, quality control/analysis, and research methodology</li>
-          </ul>
-        </ul>
-        <ul>
-          <li>Personal Attributes/Softskills</li>
-          <ul>
-            <li>Keen eye for precision and problem-solving skills</li>
-            <li>Good interpersonal and effective team spirit</li>
-            <li>Ability to work independently or with team with little no supervision</li>
-            <li>Excellent communication, writing and teaching skills</li>
-          </ul>
-        </ul>
-      </section>-->
-
       <section>
         <!--Section3 My Services-->
         <div style="background: #ec5b53; border-radius: 100px;">
@@ -678,13 +645,14 @@
               </div>
             </div>
         </div><br/>
+      </section>
 
         <!--Projects section-->
-        <div class="project-grid text-center mx-4">
+        <div class="project-grid text-center" style="padding-right: 15px !important;">
           <div class="project-item">
               <a style="text-decoration: none;" href="https://abas-blog-app.vercel.app/" target="_blank">
-                  <img width="100%" height="200px" src="./projects/abas-blog.png" alt="Abasiama Akpan blog appliction">
-                  <div class="px-2">
+                  <img  src="./projects/abas-blog.png" alt="Abasiama Akpan blog appliction">
+                  <div class="px-1">
                     <h3>Blog Application</h3>
                     <p>A fullstack blog application built with express.js. The frontend is a combination of bootstrap, tailwind and conventional css. EJS is the templating engine.</p>
                   </div>
@@ -692,8 +660,8 @@
           </div>
           <div class="project-item">
               <a style="text-decoration: none;" href="https://abasobot1.github.io/aquachloro-calculator/" target="_blank">
-                  <img src="./projects/aquachlorocalc1.png" width="100%" height="200px" alt="Aquachloro calculator">
-                  <div class="px-2">
+                  <img src="./projects/aquachlorocalc1.png"  alt="Aquachloro calculator">
+                  <div class="px-1">
                     <h3>Aquachloro Calculator</h3>
                     <p>A frontend application for the water the industry. It calculates chlorine parameters and offers the result in one click.</p>
                   </div>
@@ -701,7 +669,7 @@
           </div>
           <!-- Add more project items here -->
         </div><br>
-      </section>
+      
     
 
     <!--Svgs design>
