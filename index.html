@@ -21,7 +21,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384- GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
         <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!--project section css/js-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4+2j1xY5l5Z5e5c5e5c5e5c5e5c5e5c" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
         <link href="./style.css" rel="stylesheet"/>
+        <link href="./project.css" rel="stylesheet"/>
     
     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
     <style>
@@ -413,8 +420,7 @@
                   <div class="col-10 col-sm-8 col-lg-6 align-self-center img1" >
                     <div class="flex text-center">
                     <img src="./images/enhanced-insuit.png" class=" d-block mx-lg-auto img-fluid rounded-circle myphoto"
-                     alt="Abasiama Akpan (Abas Obot) photo"  max-width="100%" height="462.5px"  
-                    style="">
+                     alt="Abasiama Akpan (Abas Obot) photo"  max-width="100%" height="462.5px">
                     </div>
                   </div>
                 </div>
@@ -453,15 +459,7 @@
             
             <div class="col-lg-6">
               <!--<h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 "><a href="" style="color: #002d5b; text-decoration: none;">Who am I?</a></h1>-->
-              <p class="lead p1">An experienced full-stack web developer, creative writer and a SEO specialist 
-                who have initiated several projects both for clients and personal objectives. 
-                Committed to crafting realistic solutions with my experience and expertise to lay a strong foundation 
-                for my full-stack web development aspirations. I consider every project as a unique opportunity 
-                to showcase my skill and improve on it, therefore, I like it when it feels challenging.
-                I can build websites and apps, of your choice, driver traffic to your existing site or blog, resolve 
-                SEO and technical issues, take part in your project, run ads, and write SEO optimized content. 
-                Meanwhile, I am ready to work with anyone from anywhere, 
-                and I strongly believe that I am good in what I do.</p>
+              <p class="lead p1">I am an experienced full-stack web developer, creative writer, SEO specialist, and certified digital marketer, passionate about delivering tailored solutions for clients and personal projects. I build websites and apps, optimize them for search engines, and craft content to engage audiences. With expertise in digital marketing, I also run effective ad campaigns to help businesses grow. I consider every project as an opportunity to enhance my skills and showcase my expertise, and I’m always eager to collaborate with people worldwide.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 abutton">Learn more</button>
                 <!--<button type="button" class="btn btn-outline-secondary btn-lg px-4" style="border-color: #cf332b;">Default</button>-->
@@ -566,7 +564,7 @@
             <div class="col py-2">
               <div class="card card-design mb-4 py-2 rounded-3 shadow-sm" style="height: 98%;" >
                 <div class="card-header py-3">
-                  <h4 class="my-0 fw-normal">SEO</h4>
+                  <h4 class="my-0 fw-normal">SEO/Digital marketing</h4>
                 </div>
                 <div class="card-body">
                   <img src="./images/seo-small.png" width="50%" height="" alt="SEO services by Abasiama Akpan">
@@ -575,7 +573,7 @@
                     What I do is to analyze your website with modern SEO tools, identify the issues and resolve 
                     them. I offer both on-page and off-page SEO service, including setting-up your websites, 
                     crafting content that meets standard SEO requirements, backlink building, spam score 
-                    reduction and resolution of content indexing issues.</p>
+                    reduction and resolution of content indexing issues. I also run online ads for businesses.</p>
                 </div>
                 <div class="text-center mb-2">
                   <button onClick="window.location = './contact.html'" class="button-30" role="button" type="submit" value="Contact Us" style="width: 60%; text-decoration: none;">Contact</button>
@@ -613,44 +611,82 @@
             <div class="px-4 py-0 my-2 pt-4 text-center">
               <h2 class="display-5 fw-bold h11 dark-heading" id="Portfolio">My Portfolio</h2>
               <div class="col-lg-6 mx-auto">
-                <p class="lead mb-1">Checkout my work portfilio, including a few articles I have published and some of my projects.</p>
+                <p class="lead mb-1">Welcome to my portfolio! Here you can find a selection of my projects, showcasing my skills and creativity. Feel free to explore and reach out if you have any questions or would like to collaborate.</p>
                 <hr style="border: #972121 solid 1px;"/>
               </div>
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <a href="./portfolio/publications.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 abutton ">Publications</button></a>
-                <a href="./portfolio/projects.html" style="text-decoration: none !important;"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Projects</button></div>
+                <a href="./portfolio/projects.html" style="text-decoration: none !important;"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Projects</button></a></div>
               </div>
             </div>
         </div><br/>
 
+        <!--Project Carousel begins-->
         <div class="container">
+          <h3 style="text-align: center; margin-top: 20px;">Full-stack (Front/backend) Projects</h3>
+          <p style="text-align: center; max-width: 900px; margin: auto;">Explore a selection of my standout full-stack coding projects, showcasing advanced skills in both frontend and backend development. Swipe through the carousel or use the arrow buttons to see more.</p>
+        </div><br>
+  
+        <div class="carousel-container">
+          <!-- Flickity Carousel -->
+          <div class="carousel" data-flickity='{"cellAlign": "center", "contain": true, "wrapAround": true, "lazyLoad": 2, "pageDots": false, "autoPlay": 3000}'>
+              <div class="carousel-cell">
+                  <img src="./projects/rentvano.png" alt="Rentvanado project" height="250px" width="100%">
+                  <div class="carousel-caption" style="background-color: #0d9488cc; color: #ffffff;">Rentvanado: Real Estate Listing App</div>
+              </div>
+              <div class="carousel-cell">
+                  <img src="./projects/abasblog.png" alt="Blog app/CMS">
+                  <div class="carousel-caption" style="background-color: #ec5b53; color: #ffffff;">AbasBlog: Fullstack Blog/CMS App</div>
+              </div>
+              <div class="carousel-cell">
+                  <img src="./projects/blogdashboard.png" alt="Image 3">
+                  <div class="carousel-caption" style="background-color: #1e40af; color: #ffffff;">Dashboard: Modernize Dashboard Design</div>
+              </div>
+              <div class="carousel-cell">
+                  <img src="./projects/aquachloro.png" alt="Aquachloro Calculator">
+                  <div class="carousel-caption" style="background-color: #0f87ff; color: #ffffff;">Aquachloro Calculator: Water Treatment App</div>
+              </div>
+          </div>
+          <!-- Navigation Buttons -->
+          <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div>
+        <!--project carousel ends-->
+
+        <div class="container">
+          <div>
+            <h3 style="text-align: center; margin-top: 20px;">Website Building/Design Projects</h3>
+            <p style="text-align: center; max-width: 900px; margin: auto;">Discover a collection of websites I built using CMS platforms like WordPress and Blogger. These projects showcase my expertise in creating visually stunning designs, optimizing performance, and implementing user-friendly navigation.</p>
+          </div><br>
           <div class="project-gallery">
             <div class="project">
-              <img alt="Blog app with CMS" src="./projects/abas-blog.png" />
+              <img alt="Inspired Scoop - Blog website built with Blogger tools" src="./projects/inspiredscoop.jpg" />
               <div class="project-title">
-                <h3>Blog Application</h3>
+                <h4>Inspired Scoop</h4>
               </div>
-              <div class="project-author">Abasiama Akpan</div>
+              <!--div class="project-author">Abasiama Akpan</div>
               <div class="project-description">A fullstack blog and CMS application built with express.js. The frontend is a combination of bootstrap, tailwind and conventional css. EJS is the templating engine.</div>
-              <!--a class="project-button" href="./portfolio/projects.html#blogapp" rel="nofollow" target="_blank"> Learn more</a-->
+              <a class="project-button" href="./portfolio/projects.html#blogapp" rel="nofollow" target="_blank"> Learn more</a-->
+              <div class="project-description">I built Inspired Scoop, a blog website, using Blogger. I customized the theme, integrated coding solutions, managed DNS settings, and implemented effective SEO strategies to improve its visibility and reach.</div>
             </div>
             <div class="project">
-              <img alt="Aquachloro Calculator" src="./projects/aquachloro1.png" alt="Aquacholoro Calculator"/>
+              <img alt="Aquachloro Calculator" src="./projects/isservices.jpg" alt="Inspired Scoop Digital Services - A business Website"/>
               <div class="project-title">
-                <h3>Aquachloro Calculator</h3>
+                <h4>Inspired Scoop Services</h4>
               </div>
-              <div class="project-author">Abasiama Akpan</div>
-              <div class="project-description">A frontend application for the water the industry. It is intended to calculate chlorine parameters and other quality measures in the necessary for water treatment.</div>
+              <!--div class="project-author">Abasiama Akpan</div-->
+              <div class="project-description">The website showcases an elegant color palette and a stunning design, emphasizing aesthetics and user experience. I crafted custom logos and illustrations using Canva, ensuring a cohesive visual identity.</div>
               <!--a class="project-button" href="./portfolio/projects.html#aquachloro" target="_blank">Learn more</a-->
             </div>
       
             <div class="project">
-              <img alt="RentVanado" src="./projects/rentvanado Screenshot.png" />
+              <img alt="Institute of Art Lagos" src="./projects/ial.jpg" />
               <div class="project-title">
-                <h3>RentVanado</h3>
+                <h4>Institute of Art Lagos</h4>
               </div>
-              <div class="project-author">Abasiama Akpan</div>
-              <div class="project-description">A full stack development application for a real estate company. This app is under development, and some features will remain confidential until the project is complete.</div>
+              <!--div class="project-author">Abasiama Akpan</div-->
+              <div class="project-description">I developed the Institute of Art Lagos website for an art organization, leveraging WordPress builder tools such as Elementor and integrating custom code that I wrote myself. <!--This project demonstrates my ability to blend technical expertise with artistic expression, delivering a professional WordPress website tailored to organizational needs.--></div>
               <!--a class="project-button"
                 href="#" rel="nofollow" target="_blank">Learn more</a-->
             </div>
@@ -790,7 +826,9 @@
     </footer>
     
   </section>
-    
+  <!--project section js-->
+    <script src="./project.js"></script>
+
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <!--Harmburger menu-->
