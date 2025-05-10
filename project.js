@@ -18,3 +18,13 @@ $(document).ready(function () {
         flkty.flickity('next'); // Go to the next slide
     });
 });
+
+//skills progress bar
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBars = document.querySelectorAll(".progress");
+
+    progressBars.forEach(bar => {
+        const progressValue = bar.getAttribute("data-progress");
+        bar.style.width = progressValue + "%";
+    });
+});
